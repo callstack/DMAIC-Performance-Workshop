@@ -1,0 +1,21 @@
+diff --git a/node_modules/react-native-bundle-visualizer/src/react-native-bundle-visualizer.js b/node_modules/react-native-bundle-visualizer/src/react-native-bundle-visualizer.js
+index 1309bf6..5992be4 100755
+--- a/node_modules/react-native-bundle-visualizer/src/react-native-bundle-visualizer.js
++++ b/node_modules/react-native-bundle-visualizer/src/react-native-bundle-visualizer.js
+@@ -95,8 +95,6 @@ const commands = [
+   bundleOutput,
+   '--sourcemap-output',
+   bundleOutputSourceMap,
+-  '--minify',
+-  isExpo
+ ];
+ if (resetCache) {
+   commands.push('--reset-cache');
+@@ -147,6 +145,7 @@ bundlePromise
+         },
+         {
+           onlyMapped,
++          noBorderChecks: true,
+           output: {
+             format,
+             filename: bundleOutputExplorerFile,
